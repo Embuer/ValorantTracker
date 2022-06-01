@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valorant Tracker</title>
+</head>
+
+<body>
+    <div class="left">
+        <div class="season">
+            <img class="rank" src="<%= rank %>" alt="rank">
+            <p>Games: <%= season["number_of_games"] %></p>
+            <p>Wins: <%= season["wins"] %></p>
+            <p>Lvl <%= account["data"]["account_level"] %></p>
+            <p><%= mmr_ranking %>/100</p>
+            <p>RR: <%= mmr_change %></p>
+        </div>
+    </div>
+<div class="border"></div>
+    <div class="now">
+        <div class="info">
+            <h1><%= lastmatch["metadata"]["mode"] %></h1>
+            <h2><%= lastmatch["metadata"]["map"] %></h2>
+        </div>
+        <div class="time">
+            <p class="ptime"><%= timeSince %></p>
+            <p class="ptime"><%= duration %> minutes</p>
+        </div>
+        <div class="stats">
+            <p>Kills: <%= kills %></p>
+            <p>Deaths: <%= deaths %></p>
+            <p>Assists: <%= assists %></p>
+            <p>Rank: <%= position %>/<%= playeramount %></p>
+            <img class="agent" src="<%= agent %>" alt="agent">
+        </div>
+    </div>
+    <script>
+        setInterval(function() {
+            location.reload();
+        }, 15000);
+    </script>
+</body>
+
+</html>
