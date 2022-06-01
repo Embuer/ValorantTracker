@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 80
 const ValorantAPI = require("unofficial-valorant-api")
 const path = require("path");
 const { isArgumentsObject } = require('util/types');
