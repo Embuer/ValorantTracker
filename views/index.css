@@ -78,7 +78,7 @@ p {
 .agent {
     float: right;
     width: 140%;
-    transform: translateX(40%) translateY(-30%);
+    transform: translateX(30%) translateY(-30%);
 }
 
 .site {
